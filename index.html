@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <script src="./js/calculatorLogic.js"> </script>
     </head>
     <body>
         <div class="calculatorContainer">
@@ -16,27 +17,27 @@
             </div>
             <div class="operators">
                 <span class="leftContainer">
-                    <span class="resetButton">
+                    <span class="resetButton" onclick="calculatorLogic(this.className, this.id)">
                         RESET
                     </span>
-                    <span class="equalButton">
+                    <span class="equalButton" onclick="calculatorLogic(this.className, this.id)">
                         =
                     </span>
                 </span>
                 <span class="rightContainer">
                     <span class="upperOperators">
-                        <span id="addButton">
+                        <span id="addButton" onclick="calculatorLogic(this.className, this.id)">
                             +
                         </span>
-                        <span id="substractButton">
+                        <span id="substractButton" onclick="calculatorLogic(this.className, this.id)">
                             -
                         </span>
                     </span>
                     <span class="lowerOperators">
-                        <span id="multiplicationButton">
+                        <span id="multiplicationButton" onclick="calculatorLogic(this.className, this.id)">
                             *
                         </span>
-                        <span id="divisionButton">
+                        <span id="divisionButton" onclick="calculatorLogic(this.className, this.id)">
                             /
                         </span>         
                     </span>
