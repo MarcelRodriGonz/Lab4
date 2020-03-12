@@ -12,7 +12,7 @@ function calculatorLogic(classname, id){
   }
   
   instruction = recieveInstruction(classname,id);
-  if(input!=''){
+  if(input!='' || instruction=='resetButton'){
     switch(instruction){
       case 'resetButton':
         textAreaLog.value='';
