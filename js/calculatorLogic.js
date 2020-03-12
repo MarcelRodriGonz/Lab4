@@ -25,8 +25,7 @@ function calculatorLogic(classname, id){
       case 'equalButton':
         tempLog += input;
         textAreaLog.value += ('\n') + tempLog;
-        tempLog = tempLog.split(' ')
-        resultLabel.value = calculate(tempLog);
+        resultLabel.value = eval(tempLog);
         textAreaLog.value += ' = ' + resultLabel.value;
         console.log(textAreaLog.value);
         tempLog = '';
@@ -57,24 +56,4 @@ function recieveInstruction(classname,id){
   }else if(id!=''){
     return id;
   }
-}
-
-function calculate(tempLog){
-  var result=parseFloat(tempLog[0]);
-
-  for(i=1;i<tempLog.length;i+=2){
-    if(tempLog[i] == '+'){
-      result += parseFloat(tempLog[i+1]);
-    }
-    if(tempLog[i] == '-'){
-      result -= parseFloat(tempLog[i+1]);
-    }
-    if(tempLog[i] == '*'){
-      result *= parseFloat(tempLog[i+1]);
-    }
-    if(tempLog[i] == '/'){
-      result /= parseFloat(tempLog[i+1]);
-    }
-  }
-  return result.toString();
 }
